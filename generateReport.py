@@ -2,15 +2,14 @@
 
 import matplotlib.pyplot as plt
 import openpyxl
+from openpyxl.formula import Tokenizer
 
-#wb = openpyxl.load_workbook('ReportingExerciseData.xls')
-
-x_axis = [1,2,3,4]
+x_axis = [1,2,3,4] #takes values from openpyxl  
 graphArr = [65, 57, 76, 13]
 graphArr2 = [7, 4, 16, 0]
 graphArr3 = [42, 18, 12, 1]
 
-plt.figure(1)
+plt.figure(1)  #first graph
 #plt.figure(figsize=(8,8))
 plt.subplot(3, 1, 1)
 ax = plt.gca()
@@ -19,21 +18,21 @@ ax.set_xlabel('Week #')
 ax.set_ylabel('# of Patients')
 plt.plot(x_axis, graphArr)
 
-plt.subplot(3, 1, 2)
+plt.subplot(3, 1, 2) #second graph
 ax2 = plt.gca()
 ax2.set_title('Cancellations Per Week')
 ax2.set_xlabel('Week #')
 ax2.set_ylabel('# of Cancellations')
 plt.plot(x_axis, graphArr2)
 
-plt.subplot(3, 1, 3)
+plt.subplot(3, 1, 3) #third graph
 ax3 = plt.gca()
 ax3.set_title('New Patients Per Week')
 ax3.set_xlabel('Week #')
 ax3.set_ylabel('# of New Patients')
 plt.plot(x_axis, graphArr3)
 
-left = 0.125
+left = 0.125 #formatting values for graph
 right = 0.52    # the right side of the subplots of the figure
 bottom = 0.1   # the bottom of the subplots of the figure
 top = 0.9      # the top of the subplots of the figure
